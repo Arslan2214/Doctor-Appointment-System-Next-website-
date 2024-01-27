@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       {/* TopBar Section 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇 */}
 
-      <div className="flex flex-col sm:flex-row justify-between items-center w-screen py-1 px-2 sm:px-10 lg:px-20 bg-light-50 dark:bg-black text-gray-800 dark:text-white">
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full py-1 px-2 sm:px-10 lg:px-20 bg-light-50 dark:bg-black text-gray-800 dark:text-white">
         <div className="flex gap-4 items-center">
           <InfoContainer logo="@" info="admin@gmail.com" />
           <InfoContainer logo="!!" info="+92 545 2356133" />
@@ -45,7 +45,7 @@ const Navbar = () => {
           <button
             popovertarget="res_Navbar"
             popovertargetaction="open"
-            className="cursor-pointer text-2xl px-2"
+            className="inline-block sm:hidden cursor-pointer text-2xl px-2"
           >
             #
           </button>
@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Responsiveness */}
-      
+
       {/* <div
         popover
         className="flex justify-start px-20 items-center shadow-lg absolute top-0 right-0 bg-white w-1/2 h-screen z-10"
