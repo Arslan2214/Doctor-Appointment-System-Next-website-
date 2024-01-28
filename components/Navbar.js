@@ -7,6 +7,7 @@ const NavbarList = [
   { title: "About", href: "#about" },
   { title: "Services", href: "#services" },
   { title: "Departments", href: "#departments" },
+  { title: "Appointment", href: "#appointment" },
   { title: "Doctors", href: "#doctors" },
   { title: "Contact", href: "#contact" },
 ];
@@ -41,7 +42,7 @@ const Navbar = () => {
 
             {/* <NavItem text="Home" path="/" /> */}
           </ul>
-          <Action_Button text="Make an Appointment" />
+          <Action_Button text="Make an Appointment" href="#appointment" />
           <button
             popovertarget="res_Navbar"
             popovertargetaction="open"
