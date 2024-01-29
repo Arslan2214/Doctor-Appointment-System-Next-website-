@@ -97,7 +97,7 @@ const NavItem = (props) => (
 const TopbarLogo = (props) => (
   <>
     <Link
-      href={props.href}
+      href="#herosection"
       className="w-16 cursor-pointer flex items-center justify-center text-slate-500 hover:text-blue-400"
     >
       {props.logo}

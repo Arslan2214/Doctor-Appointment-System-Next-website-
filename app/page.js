@@ -1,14 +1,14 @@
 import Navbar from "@/components/Navbar";
-import HeroSection from "./(Page Sections)/HeroSection";
+import HeroSection from "./(Page Sections)/Hero_Section";
+import Footer from "@/components/Footer";
+import WhyUs_Section from "./(Page Sections)/WhyUs_Section";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <HeroSection />
-      <p className="font-semibold text-3xl mt-28 text-center">
-        Hello from Home-Page
-      </p>
+      <Footer />
     </>
   );
 }
