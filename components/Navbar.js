@@ -12,6 +12,13 @@ const NavbarList = [
   { title: "Contact", href: "#contact" },
 ];
 
+const TopbarIcons = [
+  { icon: `<i class="fa-brands fa-twitter"></i>`, href: "" },
+  { icon: `<i class="fa-brands fa-facebook"></i>`, href: "" },
+  { icon: `<i class="fa-brands fa-instagram"></i>`, href: "" },
+  { icon: `<i class="fa-brands fa-linkedin"></i>`, href: "" },
+];
+
 const Navbar = () => {
   return (
     <>
@@ -19,11 +26,19 @@ const Navbar = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center w-full py-1 px-2 sm:px-10 lg:px-20 bg-light-50 dark:bg-black text-gray-800 dark:text-white">
         <div className="flex gap-4 items-center">
-          <InfoContainer logo="@" info="admin@gmail.com" />
-          <InfoContainer logo="!!" info="+92 545 2356133" />
+          <InfoContainer
+            logo='<i class="fa-regular fa-envelope"></i>'
+            info="admin@gmail.com"
+          />
+          <InfoContainer
+            logo='<i class="fa-solid fa-mobile-screen-button"></i>'
+            info="+92 545 2356133"
+          />
         </div>
-        <div className="flex justify-center items-center gap-1">
-          <TopbarLogo logo="@" href="https://www.google.com" />
+        <div className="flex justify-center items-center gap-3">
+          {TopbarIcons.map((item, index) => (
+            <TopbarLogo logo={item.icon} href={item.href} key={index} />
+          ))}
           {/* <TopbarLogo logo="@" href="/" /> */}
         </div>
       </div>
@@ -32,7 +47,7 @@ const Navbar = () => {
 
       <div className="flex h-[9vh] items-center justify-between px-2 sm:px-10 lg:px-20 bg-light-50 shadow-md">
         <span className="drop-shadow-md font-extrabold text-4xl">
-          Madi<span className="text-rose-600">.com</span>
+          Medi<span className="text-rose-600">.com</span>
         </span>
         <div className="flex items-center justify-end gap-5 py-2">
           <ul className="list-none hidden lg:flex justify-between items-center gap-3">
@@ -98,9 +113,9 @@ const TopbarLogo = (props) => (
   <>
     <Link
       href="#herosection"
-      className="w-16 cursor-pointer flex items-center justify-center text-slate-500 hover:text-blue-400"
+      className="cursor-pointer flex items-center justify-center text-slate-500 hover:text-blue-400"
+      dangerouslySetInnerHTML={{ __html: props.logo }}
     >
-      {props.logo}
     </Link>
   </>
 );
@@ -108,7 +123,10 @@ const TopbarLogo = (props) => (
 const InfoContainer = (props) => (
   <>
     <div className="flex gap-2 text-slate-50 justify-center items-center">
-      <span className="text-blue-400 mb-1 text-lg">{props.logo}</span>
+      <span
+        className="text-blue-400 mt-1 text-md"
+        dangerouslySetInnerHTML={{ __html: props.logo }}
+      ></span>
       {props.info}
     </div>
   </>
