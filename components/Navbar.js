@@ -46,8 +46,8 @@ const Navbar = () => {
       {/* Navbar Section 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇 */}
 
       <div className="flex h-[9vh] items-center justify-between px-2 sm:px-10 lg:px-20 bg-light-50 shadow-md">
-        <span className="drop-shadow-md font-extrabold text-4xl">
-          Medi<span className="text-rose-600">.com</span>
+        <span className="drop-shadow-md text-gray-500 font-extrabold text-4xl">
+          Medi<span className="text-blue-600">.care</span>
         </span>
         <div className="flex items-center justify-end gap-5 py-2">
           <ul className="list-none hidden lg:flex justify-between items-center gap-3">
